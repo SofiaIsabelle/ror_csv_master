@@ -1,0 +1,73 @@
+
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #000;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+
+  #container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 20px 40px;
+    margin-top: 20px;
+
+    .contact-import {
+      padding-bottom: 20px;
+
+      #choose-file {
+        width: 50%;
+      }
+    }
+
+    .contact-search {
+      padding-bottom: 10px;
+
+      #search-input {
+        width: 100%;
+      }
+
+      #search-submit {
+        display: inline-flex;
+        width: 100%;
+      }
+    }
+
+    .contact-list {
+      .pagination > * {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      #contacts {
+        .pretty .price {
+          text-align: right;
+        }
+
+        .pretty th .current {
+          padding-right: 12px;
+          background-repeat: no-repeat;
+          background-position: right center;
+        }
+
+      }
+    }
+  }
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
