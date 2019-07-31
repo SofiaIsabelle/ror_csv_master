@@ -1,0 +1,32 @@
+{
+  "rows": 200,
+  "fields": [
+    {
+      "name": "uid",
+      "type": "rand:char",
+      "length": 5
+    },
+    {
+      "name": "phone",
+      "type": "rand:int",
+      "range": [1000000000, 9999999999]
+    },
+
+    {
+      "name": "first",
+      "type": "faker:name:first_name",
+      "inject": ["Salomon"]
+    },
+
+    {
+      "name": "last",
+      "type": "faker:name:last_name",
+      "inject": ["Cohen"]
+    },
+
+    {
+      "name": "email",
+      "type": "faker:internet:email"
+    }
+  ]
+}
