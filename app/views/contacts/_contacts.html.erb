@@ -1,0 +1,35 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-sm table-bordered table-hover table-responsive pretty">
+	<thead class="thead-default">
+		<tr>
+		    <th><%= sortable "number", "#"%></th>
+		    <th><%= sortable "uid", "ID" %></th>
+			<th><%= sortable "phone", "Phone" %></th>
+			<th><%= sortable "first", "First" %></th>
+			<th><%= sortable "last", "Last" %></th>
+			<th><%= sortable "email", "Email" %></th>
+		</tr>
+	</thead>
+	<% index = 0 %>
+            <% @contacts.each do |contact| %>
+    <% index += 1 %> 
+
+		
+     <tbody>
+		<tr>
+			<th scope="row"><%= index %></th>
+		<!--#	<td class="text-primary"><%= contact.uid %></td> -->
+			<td class="text-primary"><%= contact.uid %></td>
+			<td class="text-primary"><%= contact.phone %></td>
+			<td class="text-primary"><%= contact.first %></td>
+			<td class="text-primary"><%= contact.last %></td>
+			<td class="text-primary"><%= contact.email %></td>
+			
+		</tr>
+	</tbody>
+	<%end%>
+</div>
+
+<%= will_paginate @contacts %>
